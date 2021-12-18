@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$black: #282828;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+.navigation-bar-1 {
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    &__container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__underline {
+        width: 0;
+        height: 3px;
+        top: 25px;
+        background-color: $black;
+        position: absolute;
+        transition: all 500ms ease;
+    }
+    &__item {
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-align: center;
+        width: 100px;
+        &:nth-of-type(1):hover ~ .navigation-bar-1__underline {
+            left: 0;
+            width: 100px;
+            background-color: $black;
+        }
+        &:nth-of-type(2):hover ~ .navigation-bar-1__underline {
+            left: 100px;
+            width: 100px;
+            background-color: $black;
+        }
+        &:nth-of-type(3):hover ~ .navigation-bar-1__underline {
+            left: 200px;
+            width: 100px;
+            background-color: $black;
+        }
+        &:nth-of-type(4):hover ~ .navigation-bar-1__underline {
+            left: 300px;
+            width: 100px;
+            background-color: $black;
+        }
+    }
+}
+
+.navigation-bar-2 {
+    list-style-type: none;
+    display: flex;
+    &__container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        position: relative;
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-right: 30px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: $black;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+        &:hover:after {
+            width: 100%; 
+            left: 0; 
+        }
+    }
+}

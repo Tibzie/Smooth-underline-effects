@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.navigation-bar-1 {
+  list-style-type: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-bar-1__container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-bar-1__underline {
+  width: 0;
+  height: 3px;
+  top: 25px;
+  background-color: #282828;
+  position: absolute;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.navigation-bar-1__item {
+  text-decoration: none;
+  color: #282828;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+}
+
+.navigation-bar-1__item:nth-of-type(1):hover ~ .navigation-bar-1__underline {
+  left: 0;
+  width: 100px;
+  background-color: #282828;
+}
+
+.navigation-bar-1__item:nth-of-type(2):hover ~ .navigation-bar-1__underline {
+  left: 100px;
+  width: 100px;
+  background-color: #282828;
+}
+
+.navigation-bar-1__item:nth-of-type(3):hover ~ .navigation-bar-1__underline {
+  left: 200px;
+  width: 100px;
+  background-color: #282828;
+}
+
+.navigation-bar-1__item:nth-of-type(4):hover ~ .navigation-bar-1__underline {
+  left: 300px;
+  width: 100px;
+  background-color: #282828;
+}
+
+.navigation-bar-2 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-bar-2__container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-bar-2__item {
+  position: relative;
+  text-decoration: none;
+  color: #282828;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.navigation-bar-2__item:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #282828;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.navigation-bar-2__item:hover:after {
+  width: 100%;
+  left: 0;
+}
+/*# sourceMappingURL=index.css.map */
